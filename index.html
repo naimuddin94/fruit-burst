@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <title>Fruit Burst</title>
+    <!-- lato font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisyUi link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "slider-1": "url('./images/banner1.png')",
+              "slider-2": "url('./images/banner2.png')",
+              "slider-3": "url('./images/banner3.png')",
+              "slider-4": "url('./images/banner4.png')",
+            },
+            colors: {
+              "main-color": "#F85559",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-lato">
+    <header class="container mx-auto xl:px-24 md:py-5 px-5">
+      <nav>
+        <div
+          class="navbar bg-base-100 justify-between px-6 md:bg-main-color text-white rounded-full"
+        >
+          <ul class="md:flex gap-4 text-sm hidden">
+            <li class="cursor-pointer">Home</li>
+            <li class="cursor-pointer">About Us</li>
+            <li class="cursor-pointer">Shop</li>
+            <li class="cursor-pointer">All Fruits</li>
+          </ul>
+          <div class="">
+            <a class="btn btn-ghost normal-case text-lg">
+              <img class="w-7" src="./images/logo.png" alt="" />
+              <span class="text-gray-800 md:text-white">Fruit Burst</span>
+            </a>
+          </div>
+          <div class="md:hidden">
+            <i class="fa-solid fa-bars fa-lg text-gray-800"></i>
+          </div>
+          <div class="flex-none gap-2 hidden md:inline">
+            <div class="form-control text-gray-800">
+              <input
+                type="text"
+                placeholder="Search"
+                class="input input-bordered w-52 lg:w-72 rounded-full h-10"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto xl:px-24 px-5">
+      <!-- banner section -->
+      <section class="">
+        <div
+          class="carousel w-full rounded-lg h-[calc(150px+25vw)] max-h-[600px]"
+        >
+        <!-- first slider -->
+          <div
+            id="slide1"
+            class="carousel-item relative w-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.0)),url('./images/banner1.png')] bg-center bg-cover text-white"
+          >
+            <div
+              class="flex flex-col justify-center items-center w-full text-center"
+            >
+              <h1 class="text-2xl lg:text-4xl font-extrabold">
+                Exotic tastes at your
+                <br />
+                doorstep
+              </h1>
+              <p class="py-4 text-gray-200 text-xs sm:text-base">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="btn bg-main-color border-none text-white hover:text-gray-800"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a
+                href="#slide4"
+                class="btn btn-circle bg-black text-white border-none hover:text-gray-800"
+                >❮</a
+              >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-black text-white border-none hover:text-gray-800"
+                >❯</a
+              >
+            </div>
+          </div>
+          <!-- second slider -->
+          <div
+            id="slide2"
+            class="carousel-item relative w-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.4)),url('./images/banner2.png')] bg-center bg-cover text-white"
+          >
+            <div
+              class="flex flex-col justify-center items-center w-full text-center"
+            >
+              <h1 class="text-2xl lg:text-4xl font-extrabold">
+                Exotic tastes at your
+                <br />
+                doorstep
+              </h1>
+              <p class="py-4 text-gray-300">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="btn bg-main-color border-none text-white hover:text-gray-800"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-black text-white border-none hover:text-gray-800"
+                >❮</a
+              >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-black text-white border-none hover:text-gray-800"
+                >❯</a
+              >
+            </div>
+          </div>
+          <!-- third slider -->
+          <div
+            id="slide3"
+            class="carousel-item relative w-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.2)),url('./images/banner3.png')] text-white bg-center bg-cover"
+          >
+            <div
+              class="flex flex-col justify-center items-center w-full text-center"
+            >
+              <h1 class="text-2xl lg:text-4xl font-extrabold">
+                Exotic tastes at your
+                <br />
+                doorstep
+              </h1>
+              <p class="py-4 text-gray-300">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="btn bg-main-color border-none text-white hover:text-gray-800"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-black text-white border-none hover:text-gray-800"
+                >❮</a
+              >
+              <a
+                href="#slide4"
+                class="btn btn-circle bg-black text-white border-none hover:text-gray-800"
+                >❯</a
+              >
+            </div>
+          </div>
+          <!-- fourth slider -->
+          <div
+            id="slide4"
+            class="carousel-item relative w-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),rgba(0,0,0,0.2)),url('./images/banner4.png')] text-white bg-center bg-cover"
+          >
+            <div
+              class="flex flex-col justify-center items-center w-full text-center"
+            >
+              <h1 class="text-2xl lg:text-4xl font-extrabold">
+                Exotic tastes at your
+                <br />
+                doorstep
+              </h1>
+              <p class="py-4 text-gray-300">
+                We supply highly quality organic products
+              </p>
+              <button
+                class="btn bg-main-color border-none text-white hover:text-gray-800"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- font-awesome link -->
+    <script
+      src="https://kit.fontawesome.com/40da276710.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
