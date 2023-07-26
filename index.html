@@ -28,9 +28,6 @@
           extend: {
             backgroundImage: {
               "slider-1": "url('./images/banner1.png')",
-              "slider-2": "url('./images/banner2.png')",
-              "slider-3": "url('./images/banner3.png')",
-              "slider-4": "url('./images/banner4.png')",
             },
             colors: {
               "main-color": "#F85559",
@@ -46,16 +43,18 @@
     </style>
   </head>
   <body class="font-lato">
-    <header class="container mx-auto xl:px-24 md:py-5 px-5">
+    <header
+      class="container mx-auto xl:px-24 md:my-5 md:px-5 sticky top-0 z-50"
+    >
       <nav>
         <div
           class="navbar bg-base-100 justify-between px-6 md:bg-main-color text-white rounded-full"
         >
-          <ul class="md:flex gap-4 text-sm hidden">
-            <li class="cursor-pointer">Home</li>
-            <li class="cursor-pointer">About Us</li>
-            <li class="cursor-pointer">Shop</li>
-            <li class="cursor-pointer">All Fruits</li>
+          <ul class="md:flex gap-4 text-sm hidden font-medium">
+            <li class="cursor-pointer hover:underline">Home</li>
+            <li class="cursor-pointer hover:underline">About Us</li>
+            <li class="cursor-pointer hover:underline">Shop</li>
+            <li class="cursor-pointer hover:underline">All Fruits</li>
           </ul>
           <div class="">
             <a class="btn btn-ghost normal-case text-lg">
@@ -67,12 +66,15 @@
             <i class="fa-solid fa-bars fa-lg text-gray-800"></i>
           </div>
           <div class="flex-none gap-2 hidden md:inline">
-            <div class="form-control text-gray-800">
+            <div class="form-control text-gray-800 relative">
               <input
                 type="text"
                 placeholder="Search"
-                class="input input-bordered w-52 lg:w-72 rounded-full h-10"
+                class="input focus:outline-[#F3AA60] focus:outline-[1.5px] input-bordered w-52 lg:w-72 rounded-full h-10"
               />
+              <i
+                class="fa-solid fa-magnifying-glass text-gray-400 absolute right-3 top-3"
+              ></i>
             </div>
           </div>
         </div>
@@ -234,21 +236,21 @@
           </div>
         </div>
         <div
-          class="hidden md:flex items-center justify-around relative -top-16 py-4 w-[70%] mx-auto bg-gray-50 rounded-md shadow-md"
+          class="hidden md:flex items-center justify-around relative -top-16 w-[70%] mx-auto bg-gray-50 rounded-md shadow-md cursor-pointer"
         >
-          <div class="flex flex-col items-center">
+          <div class="flex-1 py-4 hover:bg-gray-300 duration-300 rounded-l-md flex flex-col items-center">
             <img class="h-20" src="./images/fruit1.png" alt="" />
             <p>Grape</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex-1 py-4 hover:bg-gray-300 duration-300 flex flex-col items-center">
             <img class="h-20" src="./images/fruit2.png" alt="" />
             <p>Orange</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex-1 py-4 hover:bg-gray-300 duration-300 flex flex-col items-center">
             <img class="h-20" src="./images/fruit3.png" alt="" />
             <p>Mango</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="flex-1 py-4 hover:bg-gray-300 duration-300 rounded-r-md flex flex-col items-center">
             <img class="h-20" src="./images/fruit4.png" alt="" />
             <p>Strawberry</p>
           </div>
@@ -261,8 +263,12 @@
         >
           <div class="md:max-w-lg">
             <div class="">
-              <h2 class="text-4xl font-extrabold">Deal of the day</h2>
-              <p class="text-gray-700 font-medium py-4 leading-5 px-8 md:px-0">
+              <h2 class="text-3xl sm:text-4xl font-extrabold">
+                Deal of the day
+              </h2>
+              <p
+                class="text-gray-700 font-medium py-4 leading-5 px-2 sm:px-8 md:px-0"
+              >
                 Contrary to popular belief, is not simply random text. It has
                 roots in a piece of classical Latin literature from 45 BC,
                 making it over 2000 years old.
@@ -271,10 +277,10 @@
           </div>
           <div class="w-fit mx-auto md:mx-0">
             <div
-              class="grid grid-flow-col gap-4 md:gap-5 text-center auto-cols-max"
+              class="grid grid-flow-col gap-3 sm:gap-4 md:gap-5 text-center auto-cols-max"
             >
               <div class="flex flex-col">
-                <span class="countdown font-extrabold text-4xl">
+                <span class="countdown font-extrabold text-3xl sm:text-4xl">
                   <span style="--value: 29"></span>
                 </span>
                 days
@@ -285,7 +291,7 @@
                 <div class="h-1 w-1 rounded-full bg-black"></div>
               </div>
               <div class="flex flex-col">
-                <span class="countdown font-extrabold text-4xl">
+                <span class="countdown font-extrabold text-3xl sm:text-4xl">
                   <span style="--value: 15"></span>
                 </span>
                 hours
@@ -296,7 +302,7 @@
                 <div class="h-1 w-1 rounded-full bg-black"></div>
               </div>
               <div class="flex flex-col">
-                <span class="countdown font-extrabold text-4xl">
+                <span class="countdown font-extrabold text-3xl sm:text-4xl">
                   <span style="--value: 25"></span>
                 </span>
                 min
@@ -307,7 +313,7 @@
                 <div class="h-1 w-1 rounded-full bg-black"></div>
               </div>
               <div class="flex flex-col">
-                <span class="countdown font-extrabold text-4xl">
+                <span class="countdown font-extrabold text-3xl sm:text-4xl">
                   <span style="--value: 08"></span>
                 </span>
                 sec
@@ -317,7 +323,7 @@
         </div>
         <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5 my-8">
           <!-- first fruit -->
-          <div class="card border">
+          <div class="card border hover:bg-gray-100 hover:shadow-md duration-200">
             <figure class="px-10 pt-10">
               <img src="/images/fruit6.png" alt="fruit" class="rounded-xl" />
             </figure>
@@ -379,14 +385,16 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="btn btn-ghost text-xs capitalize">
-                  Details
-                </button>
+                <a
+                  href="#my_modal_1"
+                  class="btn btn-ghost text-xs text-main-color capitalize"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
           <!-- second fruit -->
-          <div class="card border">
+          <div class="card border hover:bg-gray-100 hover:shadow-md duration-200">
             <figure class="px-10 pt-10">
               <img src="/images/fruit7.png" alt="fruit" class="rounded-xl" />
             </figure>
@@ -448,14 +456,16 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="btn btn-ghost text-xs capitalize">
-                  Details
-                </button>
+                <a
+                  href="#my_modal_2"
+                  class="btn btn-ghost text-xs text-main-color capitalize"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
           <!-- third fruit -->
-          <div class="card border">
+          <div class="card border hover:bg-gray-100 hover:shadow-md duration-200">
             <figure class="px-10 pt-10">
               <img src="/images/fruit8.png" alt="fruit" class="rounded-xl" />
             </figure>
@@ -517,14 +527,16 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="btn btn-ghost text-xs capitalize">
-                  Details
-                </button>
+                <a
+                  href="#my_modal_3"
+                  class="btn btn-ghost text-xs text-main-color capitalize"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
           <!-- fourth fruit -->
-          <div class="card border">
+          <div class="card border hover:bg-gray-100 hover:shadow-md duration-200">
             <figure class="px-10 pt-10">
               <img src="/images/fruit9.png" alt="fruit" class="rounded-xl" />
             </figure>
@@ -586,9 +598,11 @@
                 />
               </div>
               <div class="card-actions">
-                <button class="btn btn-ghost text-xs capitalize">
-                  Details
-                </button>
+                <a
+                  href="#my_modal_4"
+                  class="btn btn-ghost text-xs text-main-color capitalize"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
@@ -600,7 +614,7 @@
         </div>
       </section>
       <!-- team section -->
-      <section class="my-10">
+      <section class="my-20">
         <div
           class="bg-slider-1 bg-cover bg-center bg-stone-500 bg-blend-multiply text-white rounded-md py-8"
         >
@@ -624,9 +638,9 @@
                 <h2 class="text-lg font-bold">Awlad Hossain</h2>
                 <p class="text-sm">Fruits Expert</p>
                 <div class="text-red-500 flex gap-3 pt-5">
-                  <i class="fa-brands fa-square-facebook fa-lg"></i>
-                  <i class="fa-brands fa-square-twitter fa-lg"></i>
-                  <i class="fa-brands fa-linkedin fa-lg"></i>
+                  <i class="fa-brands fa-square-facebook fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-square-twitter fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-linkedin fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
                 </div>
               </div>
             </div>
@@ -639,9 +653,9 @@
                 <h2 class="text-lg font-bold">Safia Chowdhury</h2>
                 <p class="text-sm">Fruits Expert</p>
                 <div class="text-red-500 flex gap-3 pt-5">
-                  <i class="fa-brands fa-square-facebook fa-lg"></i>
-                  <i class="fa-brands fa-square-twitter fa-lg"></i>
-                  <i class="fa-brands fa-linkedin fa-lg"></i>
+                  <i class="fa-brands fa-square-facebook fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-square-twitter fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-linkedin fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
                 </div>
               </div>
             </div>
@@ -654,9 +668,9 @@
                 <h2 class="text-lg font-bold">Rokib Hossain</h2>
                 <p class="text-sm">Fruits Expert</p>
                 <div class="text-red-500 flex gap-3 pt-5">
-                  <i class="fa-brands fa-square-facebook fa-lg"></i>
-                  <i class="fa-brands fa-square-twitter fa-lg"></i>
-                  <i class="fa-brands fa-linkedin fa-lg"></i>
+                  <i class="fa-brands fa-square-facebook fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-square-twitter fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-linkedin fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
                 </div>
               </div>
             </div>
@@ -669,9 +683,9 @@
                 <h2 class="text-lg font-bold">Chaity</h2>
                 <p class="text-sm">Fruits Expert</p>
                 <div class="text-red-500 flex gap-3 pt-5">
-                  <i class="fa-brands fa-square-facebook fa-lg"></i>
-                  <i class="fa-brands fa-square-twitter fa-lg"></i>
-                  <i class="fa-brands fa-linkedin fa-lg"></i>
+                  <i class="fa-brands fa-square-facebook fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-square-twitter fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
+                  <i class="fa-brands fa-linkedin fa-lg cursor-pointer hover:text-[#F3AA60]"></i>
                 </div>
               </div>
             </div>
@@ -679,7 +693,7 @@
         </div>
       </section>
       <!-- why section -->
-      <section class="my-6">
+      <section class="my-20">
         <div class="text-center">
           <h1 class="text-2xl font-extrabold">Why Choose Us</h1>
           <p class="py-5 max-w-xl mx-auto px-9 md:px-0">
@@ -689,7 +703,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-3 h-fit gap-5 mt-4 gap-y-12 md:gap-y-0"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-3 h-fit gap-5 xl:gap-10 mt-4 gap-y-12 md:gap-y-0"
         >
           <!-- first why -->
           <div class="flex flex-col md:flex-row gap-3 items-center">
@@ -830,9 +844,7 @@
         <a class="link link-hover min-w-fit">My Account</a>
       </div>
       <div>
-        <div
-          class="grid grid-cols-6 gap-4 cursor-pointer"
-        >
+        <div class="grid grid-cols-6 gap-4 cursor-pointer">
           <i class="fa-brands fa-twitter fa-2xl hover:text-main-color"></i>
           <i class="fa-brands fa-facebook fa-2xl hover:text-main-color"></i>
           <i class="fa-brands fa-youtube fa-2xl hover:text-main-color"></i>
@@ -850,5 +862,298 @@
       src="https://kit.fontawesome.com/40da276710.js"
       crossorigin="anonymous"
     ></script>
+    <div>
+      <!-- first modal box -->
+      <div class="modal" id="my_modal_1">
+        <div class="modal-box">
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit6.png" alt="fruit" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-lg">12.90$ - 18.85$</h2>
+              <p class="text-sm">Apples</p>
+              <div class="rating rating-md rating-half">
+                <input type="radio" name="rating-22" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-10"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-22"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-action">
+            <a href="#" class="btn text-main-color">Close</a>
+            <a href="" class="btn bg-main-color text-white hover:text-main-color">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- second modal box -->
+      <div class="modal" id="my_modal_2">
+        <div class="modal-box">
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit7.png" alt="fruit" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-lg">12.90$ - 18.85$</h2>
+              <p class="text-sm">Orange</p>
+              <div class="rating rating-md rating-half">
+                <input type="radio" name="rating-21" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-21"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-action">
+            <a href="#" class="btn text-main-color">Close</a>
+            <a href="" class="btn bg-main-color text-white hover:text-main-color">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- third modal box -->
+      <div class="modal" id="my_modal_3">
+        <div class="modal-box">
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit8.png" alt="fruit" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-lg">12.90$ - 18.85$</h2>
+              <p class="text-sm">Red Dragon</p>
+              <div class="rating rating-md rating-half">
+                <input type="radio" name="rating-23" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-23"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-action">
+            <a href="#" class="btn text-main-color">Close</a>
+            <a href="" class="btn bg-main-color text-white hover:text-main-color">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- fourth modal box -->
+      <div class="modal" id="my_modal_4">
+        <div class="modal-box">
+          <div class="card">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit9.png" alt="fruit" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-lg">12.90$ - 18.85$</h2>
+              <p class="text-sm">Banana</p>
+              <div class="rating rating-md rating-half">
+                <input type="radio" name="rating-24" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-24"
+                  class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-action">
+            <a href="#" class="btn text-main-color">Close</a>
+            <a href="" class="btn bg-main-color text-white hover:text-main-color">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
